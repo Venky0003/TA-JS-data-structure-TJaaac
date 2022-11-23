@@ -8,7 +8,7 @@ let character ={};
 character.characterName = "Arya";
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 let age = 20;
-character.characterAge = age;
+character["character-age"] = age;
 // - Add a new key `sur name` with the value of the surname of the character i.e "Stark". (Don't remove the space between `sur` and `name`)
    character ["sur name"] = ["stark"];
 // - Add a new key `title` with the value title of the character i.e "Lady of Winterfell"
@@ -29,7 +29,7 @@ character.greet = function (){
 // - Check by calling `greet` and see if the message changed or not.
 character.greet
 //  - Add a new property in the character object `isAdult`. The value will be true if age is greater than 18 or it will be false.
-character.isAdult = age > 18 ? true:false;
+character.isAdult = character-age > 18 ? true:false;
 // - Add a new method (function inside objects are called methods) named `changeIsAdult`. When called should be able to flip the value of `isAdult` from true to false and false to true.
 character.changeIsAdult = function (){
     return !character.isAdult;
@@ -38,9 +38,9 @@ character.changeIsAdult();
 // - Add a new key with the name stored in variable `keyName` defined below i.e `playedBy` (use [] for computed property) and the value of "Maisie Williams"
 
 let keyName = 'playedBy';
-character.playedBy = ["Maisie Williams"]
+character[keyName ]= ["Maisie Williams"]
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
-alert(`${character.playedBy}`);
+alert(`${character[keyName]}`);
 // - Using the function `console.log` log the value of the key `42`. You don't have to add the key
 function access(){
     console.log(`${character[42]}`)
