@@ -35,12 +35,12 @@ for(collections of collection){
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times(num,str) {
+function times(num,str="test") {
   // Your code
+  if(num < 1) return [];
   let arrNew=[];
-   //let result = number * string;
   for(let i = 0; i < num; i++){
-      arrNew.push(str[i]);// +=str[i]
+      arrNew.push(str);// +=str[i]
   }
   return arrNew;
 }
