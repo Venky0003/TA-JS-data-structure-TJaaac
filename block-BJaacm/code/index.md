@@ -15,21 +15,22 @@ let newUser = user;
 - Take a photo/screenshot and add it to the folder `code`
 
 <!-- To add this image here use ![name](./hello.jpg) -->
+(./memeoryrep.jpeg)
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true and reason is both have same values snd its coopy by reference
+- `user === newUser;`//  true both vae the equal values and has same address and original value
+- `user.name === newUser.name;` // true both have the equal values  and has  same address and original value
+- `user.name == newUser.name;` // true both have the equal values  and has  same address and original value
+- `user.sibling == newUser.sibling;` // true both vae the equal values  and has  same address and original value
+- `user.sibling === newUser.sibling;`// true both vae the equal values  and has  same address and original value
+- `user.sibling == allBrothers;` //  false values may be equal but the adress refence to store it is different
+- `user.sibling === allBrothers;` //  false values may be equal but the adress refence to store it is different
+- `brothersCopy === allBrothers;` // false values may be equal but the adress refence to store it is different
+- `brothersCopy == allBrothers;` // false values may be equal but the adress refence to store it is different
+- `brothersCopy == user.sibling;` // true both have the equal values  and has  same address and original value
+- `brothersCopy === user.sibling;`//true both have the equal values  and has  same address and original value
+- `brothersCopy[0] === user.sibling[0];`//true both have the equal values  and has  same address and original value
+- `brothersCopy[1] === user.sibling[1];`//true both have the equal values  and has  same address and original value
+- `user.sibling[1] === newUser.sibling[1];`//true both have the equal values  and has  same address and original value
