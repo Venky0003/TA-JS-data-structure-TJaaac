@@ -22,7 +22,7 @@ Answer the following with reason after going through the above code:
 - `arr === arr2`// true copy by reference
 
 2. What's will be the value of `person1` and `person2` ? Explain with reason. Draw the memory representation diagram.
-  person1 will have the name:alex age:30 and person2 is undefined 
+  person1 will have the name:alex age:30 and person2 is  name:john age:50.
 <!-- To add this image here use ![name](./hello.jpg) -->
 ![memory representation](memory-repr.jpeg)
 ```js
