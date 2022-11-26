@@ -10,12 +10,12 @@ let person2 = person;
 
 person.firstName = 'Arya';
 
-console.log(person2.firstName); // output
-console.log(person.firstName); // output
-console.log(person.lastName); // output
-console.log(person == person2); // output
-console.log(person === person2); // output
-console.log(person.lastName === person2.lastName); // output
+console.log(person2.firstName); // output 'Arya' has person2 is copied by reference of address the value will be update for both. 
+console.log(person.firstName); // output  'Arya' the value has been updated
+console.log(person.lastName); // output 'Doe' the value that is assigned
+console.log(person == person2); // output true both have same address and values
+console.log(person === person2); // output true both have same address and values
+console.log(person.lastName === person2.lastName); // output  true both have same address and the value of both is equal
 ```
 
 2. Write the output with reason:
@@ -37,17 +37,17 @@ let personTwo = { ...person };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output  'John' here its a cloning using spread operator so it has different address.
+console.log(person.firstName); // output 'Arya' updated the value
+console.log(personTwo.lastName); // output 'Doe' 
+console.log(person.firstName === personTwo.firstName); // output false have different address values
+console.log(person == personTwo); // output false has diffrent address its a cloning
+console.log(person === personTwo); // output false has diffrent address its a cloning
+console.log(person.address === personTwo.address); // output true since it is shallow cloning the deep layer is not copied it will have same address for both 
+console.log(person.address == personTwo.address); // output  output true since it is shallow cloning the deep layer is not copied it will have same address for both 
+console.log(personTwo.address.city); // output 'Navada' the value of it is updated and its shallow cloning
+console.log(person.address.city); // output 'Navada' 
+console.log(person.address.city == personTwo.address.city); // output true same address and value;
 ```
 
 3. Write the output with reason:
@@ -69,17 +69,17 @@ let personTwo = { ...person, address: { ...person.address } };
 person.firstName = 'Arya';
 person.city = 'Navada';
 
-console.log(personTwo.firstName); // output
-console.log(person.firstName); // output
-console.log(personTwo.lastName); // output
-console.log(person.firstName === personTwo.firstName); // output
-console.log(person == personTwo); // output
-console.log(person === personTwo); // output
-console.log(person.address === personTwo.address); // output
-console.log(person.address == personTwo.address); // output
-console.log(personTwo.address.city); // output
-console.log(person.address.city); // output
-console.log(person.address.city == personTwo.address.city); // output
+console.log(personTwo.firstName); // output 'John' cloning
+console.log(person.firstName); // output  'Arya' 
+console.log(personTwo.lastName); // output 'Doe' cloning
+console.log(person.firstName === personTwo.firstName); // output false has different address cloning
+console.log(person == personTwo); // output false has diiferent address cloning
+console.log(person === personTwo); // output false has diiferent address cloning
+console.log(person.address === personTwo.address); // output false has diiferent address deep cloning
+console.log(person.address == personTwo.address); // output false has diiferent address deep cloning
+console.log(personTwo.address.city); // output  'San Jose' cloning
+console.log(person.address.city); // output  'Navada'
+console.log(person.address.city == personTwo.address.city); // output false has diiferent address deep cloning.
 ```
 
 4. Clone the `blogs` variable into a new variable named `clonedBlogs`
@@ -105,7 +105,9 @@ let blogs = [
 
 // Your code goes here
 ```
-
+```js
+let clonedBlogs = [...blogs]
+```
 5. Clone the `question` variable into a new variable named `questionClone`
 
 ```js
@@ -130,7 +132,9 @@ var questions = [
 
 // Your code goes here
 ```
-
+```js
+let questionClone = [...qusetions];
+```
 6. Clone the `allBlogs` variable into a new variable named `allBlogsClone`
 
 ```js
@@ -157,7 +161,9 @@ var allBlogs = {
 
 // Your code goes here
 ```
-
+```js
+let allBlogsClone ={...allBlogs{...author}[...comments]};
+```
 7. Clone the `person` variable into a new variable named `clonedPerson`
 
 ```js
@@ -190,12 +196,16 @@ let person = [
 
 // Your code goes here
 ```
+```js
+let clonedPerson =[...person]
+```
 
 8. Write a function named `cloneObject` that accepts an object and returns the clone of the object
 
 ```js
 function cloneObject() {
   // your code
+  return {...user,sisters:[...user.sisters]}
 }
 
 // Run the test below to check your function
